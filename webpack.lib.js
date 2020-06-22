@@ -7,7 +7,7 @@ module.exports = {
   //path and filename of the final output
   output: {
     path: path.resolve(__dirname, 'lib'),
-    filename: 'index.js',
+    filename: 'dragimate.js',
   },
   optimization: {
     minimize: false,

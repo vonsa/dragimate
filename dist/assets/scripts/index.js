@@ -662,7 +662,6 @@ _app__WEBPACK_IMPORTED_MODULE_0__["app"].create('.first', [{
 }, {
   transform: 'rotateY'
 }]);
-console.log(_app__WEBPACK_IMPORTED_MODULE_0__["app"]);
 
 /***/ })
 
