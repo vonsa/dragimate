@@ -1,0 +1,150 @@
+/* 
+  Intro animations
+*/
+@keyframes messageIntro {
+  0% {
+    background-color: var(--color-primary);
+    transform: translateZ(4rem) translateX(-6rem); }
+  100% {
+    background-color: var(#000);
+    transform: translateZ(4rem) translateX(0); } }
+
+/*
+  Repetitive animations
+*/
+@keyframes phone {
+  100% {
+    transform: translateY(0.2rem); } }
+
+@keyframes mobileMessage {
+  0% {
+    transform: translateZ(4rem) translateY(0); }
+  100% {
+    transform: translateZ(4rem) translateY(-3rem); } }
+
+@keyframes mobileMessageShadow {
+  0% {
+    transform: scale(1) translateX(0) translateY(0);
+    opacity: 1;
+    box-shadow: -3rem 14rem 1.6rem -1rem rgba(0, 34, 68, 0.24); }
+  100% {
+    transform: scale(1.2) translateX(-1.6rem) translateY(-2rem);
+    opacity: 0.6;
+    box-shadow: -4rem 15rem 4rem -1rem rgba(0, 34, 68, 0.24); } }
+
+/*
+  Base styles
+*/
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 62.5%; }
+
+body {
+  box-sizing: border-box;
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+a:link,
+a:visited {
+  text-decoration: none;
+  cursor: pointer; }
+
+body {
+  font-size: 1.6rem;
+  font-weight: 400; }
+
+/*
+  Heading utility classes
+*/
+.heading--primary {
+  font-size: 5rem; }
+
+.heading--secondary {
+  font-size: 3.2rem; }
+
+.heading--tertiary {
+  font-size: 2.6rem; }
+
+.heading--quad {
+  font-size: 2rem; }
+
+/*
+  font-weight utility classes
+*/
+.weight--light {
+  font-weight: 400; }
+
+.weight--bold {
+  font-weight: 700; }
+
+/*
+  Base layout
+*/
+.page-container {
+  margin: auto;
+  position: relative;
+  width: 1200px;
+  max-width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 3rem; }
+
+section:not(.info):not(:last-of-type) {
+  margin-bottom: 6rem; }
+
+/*
+  3D cube
+  ---------
+  2d rectangles transformed in 3d space with applied background images
+*/
+.section.main {
+  perspective: 900px; }
+
+.cube__wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube 0.35s ease-in-out infinite alternate; }
+
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg);
+  z-index: 2;
+  transform: rotateY(25deg) rotateX(25deg); }
+  .cube__side {
+    position: absolute;
+    width: 100%;
+    height: 100%; }
+    .cube__side.front {
+      background-color: orange;
+      transform: translateZ(100px) rotateY(180deg); }
+    .cube__side.back {
+      background-color: mediumseagreen;
+      transform: translateZ(-100px) rotateY(180deg); }
+    .cube__side.left {
+      transform: rotateY(90deg) translateZ(-100px);
+      background: yellowgreen; }
+    .cube__side.right {
+      transform: rotateY(90deg) translateZ(100px);
+      background: rebeccapurple; }
+    .cube__side.top {
+      background: teal;
+      transform: rotateX(90deg) translateZ(100px); }
+    .cube__side.bottom {
+      background: crimson;
+      transform: rotateX(90deg) translateZ(-100px); }

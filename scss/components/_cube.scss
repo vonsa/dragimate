@@ -1,0 +1,62 @@
+/*
+  3D cube
+  ---------
+  2d rectangles transformed in 3d space with applied background images
+*/
+
+.section.main {
+  perspective: 900px;
+}
+
+// wrapper for subtle cube animation
+.cube__wrapper {
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube 0.35s ease-in-out infinite alternate;
+}
+
+// Wraps all child elements to create the cube
+// Transforms are applied to the .cube element by Javascript
+.cube {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  transform-style: preserve-3d;
+  transform: rotateX(15deg);
+  z-index: 2;
+  transform: rotateY(25deg) rotateX(25deg);
+
+  &__side {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    &.front {
+      background-color: orange;
+      transform: translateZ(100px) rotateY(180deg);
+    }
+
+    &.back {
+      background-color: mediumseagreen;
+      transform: translateZ(-100px) rotateY(180deg);
+    }
+
+    &.left {
+      transform: rotateY(90deg) translateZ(-100px);
+      background: yellowgreen;
+    }
+    &.right {
+      transform: rotateY(90deg) translateZ(100px);
+      background: rebeccapurple;
+    }
+
+    &.top {
+      background: teal;
+      transform: rotateX(90deg) translateZ(100px);
+    }
+    &.bottom {
+      background: crimson;
+      transform: rotateX(90deg) translateZ(-100px);
+    }
+  }
+}

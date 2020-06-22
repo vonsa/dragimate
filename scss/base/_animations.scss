@@ -1,0 +1,51 @@
+/* 
+  Intro animations
+*/
+
+// mobile message slide in and color shift intro
+@keyframes messageIntro {
+  0% {
+    background-color: var(--color-primary);
+    transform: translateZ(4rem) translateX(-6rem);
+  }
+
+  100% {
+    background-color: var($color-black);
+    transform: translateZ(4rem) translateX(0);
+  }
+}
+
+/*
+  Repetitive animations
+*/
+
+// Subtle phone alternating movement
+@keyframes phone {
+  100% {
+    transform: translateY(0.2rem);
+  }
+}
+
+// Subtle mobile message alternating movement
+@keyframes mobileMessage {
+  0% {
+    transform: translateZ(4rem) translateY(0);
+  }
+  100% {
+    transform: translateZ(4rem) translateY(-3rem);
+  }
+}
+
+// Subtle mobile message's shadow alternating movement
+@keyframes mobileMessageShadow {
+  0% {
+    transform: scale(1) translateX(0) translateY(0);
+    opacity: 1;
+    box-shadow: -3rem 14rem 1.6rem -1rem rgba($color-shadow, 0.24);
+  }
+  100% {
+    transform: scale(1.2) translateX(-1.6rem) translateY(-2rem);
+    opacity: 0.6;
+    box-shadow: -4rem 15rem 4rem -1rem rgba($color-shadow, 0.24);
+  }
+}

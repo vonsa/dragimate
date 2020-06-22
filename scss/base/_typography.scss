@@ -1,0 +1,36 @@
+body {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/*
+  Heading utility classes
+*/
+
+.heading--primary {
+  font-size: 5rem;
+}
+
+.heading--secondary {
+  font-size: 3.2rem;
+}
+
+.heading--tertiary {
+  font-size: 2.6rem;
+}
+
+.heading--quad {
+  font-size: 2rem;
+}
+
+/*
+  font-weight utility classes
+*/
+
+.weight--light {
+  font-weight: 400;
+}
+
+.weight--bold {
+  font-weight: 700;
+}
