@@ -184,6 +184,7 @@ export class Elements {
           val.transforms[key].dragSpeedInput / (this.vw / 500 + 2.5);
       }
     });
+    console.log('resize triggered!');
   }
 
   /*

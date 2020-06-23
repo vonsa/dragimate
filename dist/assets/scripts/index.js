@@ -484,6 +484,7 @@ class Elements {
         val.transforms[key].dragSpeed = val.transforms[key].dragSpeedInput / (this.vw / 500 + 2.5);
       }
     });
+    console.log('resize triggered!');
   }
   /*
     #listen
@@ -634,15 +635,18 @@ class MouseMovement {
 /*!********************!*\
   !*** ./src/app.js ***!
   \********************/
-/*! exports provided: app */
+/*! exports provided: create */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "app", function() { return app; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "create", function() { return create; });
 /* harmony import */ var _Modules_Elements__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Modules/Elements */ "./src/Modules/Elements.js");
 
-const app = new _Modules_Elements__WEBPACK_IMPORTED_MODULE_0__["Elements"]();
+const dragimate = new _Modules_Elements__WEBPACK_IMPORTED_MODULE_0__["Elements"]();
+function create(selector, animationObject) {
+  return dragimate.create(selector, animationObject);
+}
 
 /***/ }),
 
@@ -657,7 +661,7 @@ const app = new _Modules_Elements__WEBPACK_IMPORTED_MODULE_0__["Elements"]();
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _app__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./app */ "./src/app.js");
 
-_app__WEBPACK_IMPORTED_MODULE_0__["app"].create('.first', [{
+Object(_app__WEBPACK_IMPORTED_MODULE_0__["create"])('.first', [{
   transform: 'rotateX'
 }, {
   transform: 'rotateY'

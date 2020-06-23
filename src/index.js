@@ -1,3 +1,3 @@
-import { app } from './app';
+import { create } from './app';
 
-app.create('.first', [{ transform: 'rotateX' }, { transform: 'rotateY' }]);
+create('.first', [{ transform: 'rotateX' }, { transform: 'rotateY' }]);
