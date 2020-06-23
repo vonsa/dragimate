@@ -12,12 +12,10 @@ Make any HTML element transformable on the front end by using a mouse or touch d
 1. Import the library into your HTML file, before calling it in one of your other scripts.
 
 ```
-<script src="dragimate.min.js" defer></script>
+<script src="dragimate.min.js"></script>
 ```
 
-2. Create an array of animation objects. Transform types are required, the remaining properties are optional.
-
-For example:
+2. Create an array of animation objects. Transform types are required, the remaining properties are optional. For example:
 
 ```
 const animationObjects = [{ transform: 'rotateX', dragSpeed: 1, initalValue: 0, easeSpeed: 1, easeDuration: 200, }, { transform: 'rotateY' }];
