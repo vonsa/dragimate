@@ -1,4 +1,4 @@
-# dragimate
+# Dragimate
 
 Make any HTML element transformable on the front end by using a mouse or touch device
 
